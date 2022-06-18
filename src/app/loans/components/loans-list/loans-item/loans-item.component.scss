@@ -1,6 +1,7 @@
 @import "variables";
 
 .loan {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,5 +22,15 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  &__label {
+    position: absolute;
+    top: $padding-default;
+    right: $padding-default;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: $label-color;
   }
 }

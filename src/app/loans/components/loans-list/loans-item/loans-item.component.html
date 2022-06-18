@@ -23,5 +23,7 @@
     </ul>
   </div>
 
+  <p class="loan__label" *ngIf="loan?.isInvested">Invested</p>
+
   <app-button (click)="onBtnClick()"></app-button>
 </div>
