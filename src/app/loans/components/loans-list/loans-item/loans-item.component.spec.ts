@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 
 import { LoansItemComponent } from './loans-item.component';
 
@@ -8,9 +9,8 @@ describe('LoansItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoansItemComponent ]
-    })
-    .compileComponents();
+      declarations: [LoansItemComponent, ButtonComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,10 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { ModalComponent } from './core/components/modal/modal.component';
+import { LoansPageComponent } from './loans/pages/loans-page/loans-page.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent],
+      declarations: [
+        AppComponent,
+        HeaderComponent,
+        LoansPageComponent,
+        ModalComponent,
+      ],
     }).compileComponents();
   });
 
