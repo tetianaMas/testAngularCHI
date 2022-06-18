@@ -1,5 +1,5 @@
 <ng-template [ngIf]="data.isOpen">
-  <div class="overlay"></div>
+  <div class="overlay" (click)="onCloseBtn()"></div>
   <div class="modal">
     <button class="modal__close-btn" type="button" (click)="onCloseBtn()"></button>
     <div class="modal__data">
@@ -7,7 +7,7 @@
       <p class="modal__text modal__text--subtitle">{{ data.title }}</p>
 
       <p class="modal__text">Amount available: {{ data.amount | currency: 'USD': 'symbol': '1.0-10' }}</p>
-      <p class="modal__text">Loan ends in: {{ data.loanEnds }}</p>
+      <p class="modal__text">Loan ends in: {{ data.loanEnds | timeFormatter }}</p>
     </div>
 
     <form class="modal__form">

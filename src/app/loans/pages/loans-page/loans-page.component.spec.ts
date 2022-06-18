@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { TimeFormatterPipe } from 'src/app/shared/pipes/time-formatter.pipe';
 import { LoansItemComponent } from '../../components/loans-list/loans-item/loans-item.component';
 import { LoansListComponent } from '../../components/loans-list/loans-list.component';
 import { LoansSumPipe } from '../../pipes/loans-sum.pipe';
@@ -19,6 +20,7 @@ describe('LoansPageComponent', () => {
         LoansListComponent,
         LoansItemComponent,
         ButtonComponent,
+        TimeFormatterPipe,
       ],
       providers: [LoanService],
     }).compileComponents();

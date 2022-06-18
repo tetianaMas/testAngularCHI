@@ -12,7 +12,7 @@
         Loan return: {{ loan?.annualisedReturn | currency: 'USD': 'symbol': '1.0-10' }}
       </li>
       <li class="loan__detail__item">
-        Loan ends in: {{ loan?.termRemaining }}
+        Loan ends in: {{ loan?.termRemaining || 0 |timeFormatter }}
       </li>
       <li class="loan__detail__item">
         Ltv: {{ loan?.ltv | currency: 'USD': 'symbol': '1.0-10' }}

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { TimeFormatterPipe } from 'src/app/shared/pipes/time-formatter.pipe';
 
 import { LoansItemComponent } from './loans-item.component';
 
@@ -9,7 +10,7 @@ describe('LoansItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoansItemComponent, ButtonComponent],
+      declarations: [LoansItemComponent, ButtonComponent, TimeFormatterPipe],
     }).compileComponents();
   });
 
