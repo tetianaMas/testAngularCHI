@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Loan } from 'src/app/shared/models/loan.model';
 
 @Component({
@@ -8,4 +8,10 @@ import { Loan } from 'src/app/shared/models/loan.model';
 })
 export class LoansItemComponent {
   @Input() public loan: Loan | null = null;
+
+  @Output() public loanClick = new EventEmitter<void>();
+
+  public onBtnClick(): void {
+    this.loanClick.emit();
+  }
 }

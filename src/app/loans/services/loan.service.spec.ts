@@ -8,9 +8,7 @@ describe('LoanService', () => {
   let values: Loan[] = [];
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [LoanService],
-    });
+    TestBed.configureTestingModule({});
     service = TestBed.inject(LoanService);
 
     service.loadLoans();

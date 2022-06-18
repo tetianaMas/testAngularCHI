@@ -1,5 +1,5 @@
 <div class="loans-list">
-  <app-loans-item *ngFor="let loan of loans" [loan]="loan"></app-loans-item>
+  <app-loans-item *ngFor="let loan of loans" [loan]="loan" (loanClick)="onLoanClick(loan)"></app-loans-item>
   <p class="loans-list__total">
     <span>Total amount available for investment:</span> {{ totalAmount | currency:'USD':'symbol': '1.0-10' }}
   </p>

@@ -3,7 +3,9 @@ import { ReplaySubject } from 'rxjs';
 import { LOANS } from 'src/app/shared/mocks/loans';
 import { Loan } from 'src/app/shared/models/loan.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class LoanService {
   private loans: Loan[] = [];
 
@@ -24,6 +26,6 @@ export class LoanService {
     currLoan.amount += value;
     currLoan.isInvested = true;
 
-    this.loans$.next(this.loans);
+    this.loans$.next([...this.loans]);
   }
 }

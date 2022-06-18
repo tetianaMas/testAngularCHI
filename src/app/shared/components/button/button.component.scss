@@ -1,17 +1,18 @@
 @import "variables";
+@import "mixins";
 
 .button {
+  @include reset-btn;
+
   padding: calc($padding-default / 2) $padding-default;
   font-family: $font-inter;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
-  border: none;
   border-radius: $border-radius-sm;
   background-color: $btn-color;
   transition: background-color 0.3s;
-  cursor: pointer;
 
   &:hover {
     background-color: $btn-color-dark;

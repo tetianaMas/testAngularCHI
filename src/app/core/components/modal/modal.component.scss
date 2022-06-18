@@ -1,0 +1,109 @@
+@import "variables";
+@import "mixins";
+
+.overlay {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $overlay-color;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: calc($padding-default * 2);
+  background-color: $bg-color;
+  border-radius: $border-radius-sm;
+
+  &__title {
+    margin-bottom: $padding-default;
+
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    &--subtitle {
+      margin-bottom: $padding-default;
+    }
+  }
+
+  &__data {
+    margin-bottom: calc($padding-default * 2);
+  }
+
+  &__close-btn {
+    @include reset-btn;
+
+    position: absolute;
+    right: $padding-default;
+    top: $padding-default;
+    width: $padding-default;
+    height: $padding-default;
+
+    &:hover {
+      &:before,
+      &:after {
+        background-color: $btn-color;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 15px;
+      height: 33px;
+      width: 2px;
+      background-color: $font-color;
+      transition: background-color 0.3s;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__form {
+    &__title {
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__input {
+      width: 328px;
+      height: 56px;
+      margin-right: $padding-default;
+      padding: calc($padding-default / 2) $padding-default;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: right;
+      background: $bg-color;
+      border: $border;
+      border-radius: $border-radius-sm;
+    }
+  }
+}

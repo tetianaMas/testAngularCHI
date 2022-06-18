@@ -1,6 +1,6 @@
-<main class="loans">
+<main class="loans" *ngIf="(loansService.loans$  | async) as loans ">
   <div class="container">
-    <app-loans-list [loans]="loansService.loans$ | async">
+    <app-loans-list [loans]="loans" [totalAmount]="loans | loansSum">
     </app-loans-list>
   </div>
 </main>

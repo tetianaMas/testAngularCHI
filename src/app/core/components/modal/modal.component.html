@@ -1,0 +1,21 @@
+<ng-template [ngIf]="data.isOpen">
+  <div class="overlay"></div>
+  <div class="modal">
+    <button class="modal__close-btn" type="button" (click)="onCloseBtn()"></button>
+    <div class="modal__data">
+      <h3 class="modal__title">{{ title }}</h3>
+      <p class="modal__text modal__text--subtitle">{{ data.title }}</p>
+
+      <p class="modal__text">Amount available: {{ data.amount | currency: 'USD': 'symbol': '1.0-10' }}</p>
+      <p class="modal__text">Loan ends in: {{ data.loanEnds }}</p>
+    </div>
+
+    <form class="modal__form">
+      <h3 class="modal__form__title">{{ formTitle }}</h3>
+      <div class="modal__form__data">
+        <input class="modal__form__input" type="number" [(ngModel)]="value" name="currency">
+        <app-button (click)="onClickInvest(data.id, value)"></app-button>
+      </div>
+    </form>
+  </div>
+</ng-template>
