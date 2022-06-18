@@ -1,1 +1,27 @@
-<p>loans-item works!</p>
+<div class="loan">
+  <div class="loan__info">
+    <h2 class="loan__title">{{ loan?.title || '' }}</h2>
+    <ul class="loan__detail">
+      <li class="loan__detail__item">
+        Tranche: {{ loan?.tranche }}
+      </li>
+      <li class="loan__detail__item">
+        Available: {{ loan?.available?.replace(',', '') | currency: 'USD': 'symbol': '1.0-10' }}
+      </li>
+      <li class="loan__detail__item">
+        Loan return: {{ loan?.annualised_return | currency: 'USD': 'symbol': '1.0-10' }}
+      </li>
+      <li class="loan__detail__item">
+        Loan ends in: {{ loan?.term_remaining }}
+      </li>
+      <li class="loan__detail__item">
+        Ltv: {{ loan?.ltv | currency: 'USD': 'symbol': '1.0-10' }}
+      </li>
+      <li class="loan__detail__item">
+        Amount: {{ loan?.amount?.replace(',', '') | currency:'USD': 'symbol': '1.0-10' }}
+      </li>
+    </ul>
+  </div>
+
+  <app-button></app-button>
+</div>

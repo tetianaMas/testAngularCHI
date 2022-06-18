@@ -1,7 +1,7 @@
 @import "variables";
 
 .header {
-  border-bottom: 1px solid $border-color;
+  border-bottom: $border;
 
   &__title {
     padding: $padding-default 0;

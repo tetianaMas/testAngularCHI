@@ -7,6 +7,7 @@
     url("../../assets/fonts/Inter-Regular.woff") format("woff"),
     url("../../assets/fonts/Inter-Regular.ttf") format("truetype"),
     url("../../assets/fonts/Inter-Regular.svg#svgFontName") format("svg");
+  font-weight: 400;
 }
 
 @font-face {
@@ -18,6 +19,7 @@
     url("../../assets/fonts/Inter-Medium.woff") format("woff"),
     url("../../assets/fonts/Inter-Medium.ttf") format("truetype"),
     url("../../assets/fonts/Inter-Medium.svg#svgFontName") format("svg");
+  font-weight: 500;
 }
 
 @font-face {
@@ -29,4 +31,5 @@
     url("../../assets/fonts/Inter-SemiBold.woff") format("woff"),
     url("../../assets/fonts/Inter-SemiBold.ttf") format("truetype"),
     url("../../assets/fonts/Inter-SemiBold.svg#svgFontName") format("svg");
+  font-weight: 600;
 }
