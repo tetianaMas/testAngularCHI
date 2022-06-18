@@ -6,19 +6,19 @@
         Tranche: {{ loan?.tranche }}
       </li>
       <li class="loan__detail__item">
-        Available: {{ loan?.available?.replace(',', '') | currency: 'USD': 'symbol': '1.0-10' }}
+        Available: {{ loan?.available | currency: 'USD': 'symbol': '1.0-10' }}
       </li>
       <li class="loan__detail__item">
-        Loan return: {{ loan?.annualised_return | currency: 'USD': 'symbol': '1.0-10' }}
+        Loan return: {{ loan?.annualisedReturn | currency: 'USD': 'symbol': '1.0-10' }}
       </li>
       <li class="loan__detail__item">
-        Loan ends in: {{ loan?.term_remaining }}
+        Loan ends in: {{ loan?.termRemaining }}
       </li>
       <li class="loan__detail__item">
         Ltv: {{ loan?.ltv | currency: 'USD': 'symbol': '1.0-10' }}
       </li>
       <li class="loan__detail__item">
-        Amount: {{ loan?.amount?.replace(',', '') | currency:'USD': 'symbol': '1.0-10' }}
+        Amount: {{ loan?.amount | currency:'USD': 'symbol': '1.0-10' }}
       </li>
     </ul>
   </div>

@@ -1,5 +1,6 @@
 <main class="loans">
   <div class="container">
-    <app-loans-list [loans]="loans"></app-loans-list>
+    <app-loans-list [loans]="loansService.loans$ | async">
+    </app-loans-list>
   </div>
 </main>

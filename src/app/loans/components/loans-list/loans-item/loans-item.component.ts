@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TLoan } from 'src/app/shared/models/loan.model';
+import { Loan } from 'src/app/shared/models/loan.model';
 
 @Component({
   selector: 'app-loans-item',
@@ -7,5 +7,5 @@ import { TLoan } from 'src/app/shared/models/loan.model';
   styleUrls: ['./loans-item.component.scss'],
 })
 export class LoansItemComponent {
-  @Input() public loan: TLoan | null = null;
+  @Input() public loan: Loan | null = null;
 }

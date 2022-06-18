@@ -1,6 +1,6 @@
-import { TLoan } from '../models/loan.model';
+import { ILoan } from '../models/loan.model';
 
-export const LOANS: TLoan[] = [
+export const LOANS: ILoan[] = [
   {
     id: '1',
     title: 'Voluptate et sed tempora qui quisquam.',
